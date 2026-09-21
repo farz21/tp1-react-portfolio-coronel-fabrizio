@@ -1,0 +1,22 @@
+.contact-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+.contact-links { display: flex; flex-direction: column; gap: 15px; }
+.contact-subtitle { font-size: 1.1rem; color: #94a3b8; margin-bottom: 10px; }
+.elegant-form { display: flex; flex-direction: column; gap: 20px; }
+.elegant-form input, .elegant-form textarea {
+  width: 100%;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.elegant-form input:focus, .elegant-form textarea:focus {
+  outline: none;
+  border-color: #a855f7;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+}
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }

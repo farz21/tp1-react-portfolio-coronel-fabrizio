@@ -1,0 +1,135 @@
+/* =========================================
+   CONTENEDOR DE PESTAÑAS (TABS)
+   ========================================= */
+.about-tabs {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+/* =========================================
+   BOTONES DE LAS PESTAÑAS
+   ========================================= */
+.tab-btn {
+  background: none;
+  border: none;
+  color: #94a3b8; /* Gris azulado para pestañas inactivas */
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 10px;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: inherit;
+}
+
+.tab-btn:hover {
+  color: #e2e8f0; /* Más claro al pasar el mouse */
+}
+
+/* Estado activo de la pestaña */
+.tab-btn.active {
+  color: #2dd4bf; /* Color cyan/turquesa elegante */
+}
+
+/* Línea indicadora debajo de la pestaña activa */
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -11px; /* Se alinea exacto sobre el borde inferior de .about-tabs */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #2dd4bf;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.5); /* Ligero resplandor neón */
+}
+
+/* =========================================
+   CONTENIDO DE LAS PESTAÑAS
+   ========================================= */
+.tab-content {
+  min-height: 120px; /* Evita que la tarjeta salte de tamaño al cambiar de pestaña */
+}
+
+.tab-content p {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Estilos específicos para la sección de educación */
+.educacion-info h4 {
+  color: #f8fafc;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.educacion-info p {
+  margin-bottom: 15px;
+  color: #94a3b8; /* Un poco más oscuro para diferenciar de la carrera */
+}
+
+/* Etiqueta (Badge) para el estado actual de la carrera */
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  border-radius: 20px;
+  color: #2dd4bf;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   ANIMACIONES
+   ========================================= */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* =========================================
+   DISEÑO RESPONSIVO (MÓVILES)
+   ========================================= */
+@media (max-width: 480px) {
+  .about-tabs {
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+  
+  .tab-btn.active::after {
+    display: none; /* Quitamos la línea horizontal en móviles */
+  }
+  
+  .tab-btn {
+    text-align: left;
+    border-left: 2px solid transparent;
+    padding: 10px 15px;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .tab-btn.active {
+    border-left-color: #2dd4bf; /* La línea indicadora pasa al lado izquierdo */
+    background: rgba(45, 212, 191, 0.05); /* Fondo sutil para la pestaña seleccionada */
+  }
+}
