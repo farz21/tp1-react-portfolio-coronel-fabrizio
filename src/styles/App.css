@@ -82,3 +82,36 @@ body {
   background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
   box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
 }
+@media (max-width: 768px) {
+  /* Reducimos el padding de los paneles para ganar espacio en pantalla */
+  .glass-panel {
+    padding: 25px 20px;
+    margin-bottom: 30px;
+  }
+
+  /* Achicamos los títulos de sección para que no se desborden */
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajuste extremo para pantallas de celulares muy pequeñas */
+  .glass-panel {
+    padding: 20px 15px;
+  }
+
+  /* Tamaño ideal para que "Certificaciones" (palabra de 15 letras) entre perfecta */
+  .section-title {
+    font-size: 1.5rem; 
+  }
+
+  /* Ajustamos los botones generales para que no queden gigantes */
+  .elegant-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    width: 100%; /* Botones de ancho completo en móviles */
+    justify-content: center;
+  }
+}

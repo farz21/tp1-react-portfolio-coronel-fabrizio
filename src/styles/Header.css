@@ -83,11 +83,36 @@
   .elegant-header {
     flex-direction: column-reverse;
     text-align: center;
+    gap: 30px;
   }
+  
   .header-actions {
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
   }
+
+  /* Achicamos tu nombre para que no rompa el diseño */
   .gradient-text {
-    font-size: 2.2rem;
+    font-size: 2.2rem; 
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gradient-text {
+    font-size: 1.8rem;
+  }
+  
+  .header-img-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .header-img {
+    width: 180px;
+    height: 180px;
   }
 }

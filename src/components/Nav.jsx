@@ -7,7 +7,9 @@ export default function Nav() {
   return (
     <nav className="glass-nav">
       <div className="nav-header">
-        <span className="logo">Fabrizio Coronel</span>
+        <a href="#inicio" className="text-logo">
+          Fabrizio Coronel
+        </a>
         <button className="hamburger-btn" onClick={() => setMenuAbierto(!menuAbierto)}>
           ☰
         </button>
