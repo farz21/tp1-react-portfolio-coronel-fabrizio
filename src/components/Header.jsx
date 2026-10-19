@@ -1,15 +1,16 @@
+import { Link } from 'react-router-dom';
 import fotoPerfil from '../assets/foto_perfil.png';
 import '../styles/Header.css';
 
-export default function Header({ nombre, profesion }) {
+const Header = ({ nombre, profesion }) => {
   return (
-    <header id="inicio" className="glass-panel elegant-header">
+    <header className="glass-panel elegant-header page-fade-in">
       <div className="header-text">
         <h1 className="gradient-text">{nombre}</h1>
         <h2 className="subtitle">{profesion}</h2>
         <div className="header-actions">
-          <a href="#contacto" className="elegant-btn primary">Contáctame</a>
-          <a href="#proyectos" className="elegant-btn">Ver Proyectos</a>
+          <Link to="/contact" className="elegant-btn primary">Contáctame</Link>
+          <Link to="/projects" className="elegant-btn">Ver Proyectos</Link>
         </div>
       </div>
       <div className="header-img-container">
@@ -19,3 +20,4 @@ export default function Header({ nombre, profesion }) {
     </header>
   );
 }
+export default Header;

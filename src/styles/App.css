@@ -115,3 +115,33 @@ body {
     justify-content: center;
   }
 }
+/* =========================================
+   LAYOUT TP2 (Sidebar 30% - Main 70%)
+   ========================================= */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1; /* Ocupa el espacio restante (aprox 70%) */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Permite scrollear solo el contenido */
+}
+
+/* Ajustes para que las páginas no estén pegadas arriba */
+.glass-panel {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 900px) {
+  .app-layout {
+    flex-direction: column;
+  }
+  .main-content {
+    padding: 20px;
+  }
+}

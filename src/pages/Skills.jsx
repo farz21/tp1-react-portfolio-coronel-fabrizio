@@ -16,7 +16,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="habilidades" className="glass-panel">
+    <section className="glass-panel page-fade-in">
       <h3 className="section-title">Mis Habilidades</h3>
       <div className="skills-grid">
         {habilidades.map((hab) => (

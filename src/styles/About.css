@@ -58,6 +58,7 @@
   color: #cbd5e1;
   font-size: 1.05rem;
   line-height: 1.7;
+  word-wrap: break-word;
 }
 
 /* Estilos específicos para la sección de educación */

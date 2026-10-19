@@ -1,4 +1,4 @@
-import ProjectCard from './ProjectCard';
+import ProjectCard from '../components/ProjectCard';
 import imgProyecto1 from '../assets/hotel-home.png'; 
 import imgProyecto2 from '../assets/shop-home.png';
 import imgProyecto3 from '../assets/bank-home.png';

@@ -2,7 +2,6 @@ import { useState } from "react";
 import "../styles/About.css";
 
 export default function About() {
-  // Estado para manejar la pestaña activa
   const [tabActiva, setTabActiva] = useState("perfil");
 
   return (

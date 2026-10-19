@@ -13,6 +13,14 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  /* Reducimos el minmax a 260px para que entren cómodamente 2 o 3 tarjetas */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+@media (max-width: 1100px) {
+  /* Si la pantalla se achica pero el sidebar sigue ahí, ajustamos el gap */
+  .projects-grid {
+    gap: 15px;
+  }
 }
