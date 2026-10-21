@@ -1,17 +1,26 @@
-.cert-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  width: 100%; /* Asegura que el contenedor tome el ancho disponible */
+/* =========================================
+   GRILLA DE CERTIFICACIONES
+   ========================================= */
+.cert-grid {
+  display: grid;
+  /* Se adapta automáticamente: si hay espacio muestra 2 por fila, si no, baja a 1 */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .cert-img {
-  max-width: 100%; /* Evita que la imagen se salga del contenedor de 70% */
+  width: 100%;
   height: auto;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  
+  /* LA SOLUCIÓN AL PROBLEMA DEL COLOR: */
+  background-color: #ffffff; /* Fuerza un fondo blanco detrás del certificado */
+  padding: 5px; /* Crea un pequeño marco blanco muy elegante */
+  object-fit: contain; /* Evita que la imagen se deforme */
 }
 
 .elegant-shadow {
@@ -19,5 +28,15 @@
 }
 
 .cert-img:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(45, 212, 191, 0.3); /* Le da un brillo cyan al hacer hover */
+  border-color: rgba(45, 212, 191, 0.5);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+  .cert-grid {
+    grid-template-columns: 1fr; /* Una imagen por fila en celulares */
+    gap: 20px;
+  }
 }
