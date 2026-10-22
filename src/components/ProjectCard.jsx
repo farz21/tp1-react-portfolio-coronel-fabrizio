@@ -1,6 +1,6 @@
 import '../styles/ProjectCard.css';
 
-export default function ProjectCard({ titulo, descripcion, imagen, repo, demo }) {
+const ProjectCard = ({ titulo, descripcion, imagen, repo, demo }) => {
   return (
     <article className="elegant-card">
       <div className="card-img-wrapper">
@@ -17,3 +17,4 @@ export default function ProjectCard({ titulo, descripcion, imagen, repo, demo })
     </article>
   );
 }
+export default ProjectCard;

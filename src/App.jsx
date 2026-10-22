@@ -12,7 +12,7 @@ import Contact from './pages/Contact';
 
 import './styles/App.css';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <div className="app-layout">

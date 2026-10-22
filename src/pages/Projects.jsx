@@ -4,7 +4,7 @@ import imgProyecto2 from '../assets/shop-home.png';
 import imgProyecto3 from '../assets/bank-home.png';
 import '../styles/Projects.css';
 
-export default function Projects() {
+const Projects = () => {
   const misProyectos = [
     {
       id: 1,
@@ -50,3 +50,4 @@ export default function Projects() {
     </section>
   );
 }
+export default Projects;

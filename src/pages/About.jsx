@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/About.css";
 
-export default function About() {
+const About = () => {
   const [tabActiva, setTabActiva] = useState("perfil");
 
   return (
@@ -49,3 +49,4 @@ export default function About() {
     </section>
   );
 }
+export default About;

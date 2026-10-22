@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import emailjs from "@emailjs/browser";
 import '../styles/Contact.css';
 
-export default function Contact() {
+const Contact = () => {
   const formRef = useRef();
 
   const handleSubmit = (e) => {
@@ -41,3 +41,4 @@ export default function Contact() {
     </section>
   );
 }
+export default Contact;

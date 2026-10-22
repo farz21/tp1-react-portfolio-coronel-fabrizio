@@ -2,7 +2,7 @@ import certImg1 from "../assets/certificado_fullstack.png"; // Reemplaza con tus
 import certImg2 from "../assets/certificado_powerBI.png";
 import "../styles/Certifications.css";
 
-export default function Certifications() {
+const Certifications = () => {
   return (
     <section className="glass-panel page-fade-in">
       <h3 className="section-title">Certificaciones</h3>
@@ -22,3 +22,4 @@ export default function Certifications() {
     </section>
   );
 }
+export default Certifications;
